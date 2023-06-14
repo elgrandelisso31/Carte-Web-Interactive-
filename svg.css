@@ -1,0 +1,100 @@
+body {
+  background-color: #e7e7e7;
+}
+
+.bouton {
+	margin-top: 60px; /* Pour éviter que le bouton soit masqué par la barre */
+	padding: 10px;
+	background-color: #28a745; /* Couleur verte */
+	color: #fff; /* Couleur du texte */
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.navbar {
+  background-color: blue;
+  padding: 10px;
+}
+.nav-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.nav-button a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.map__list{
+    margin-left: 12px;
+    margin-top: 0px;
+}
+
+.map__img{
+    width: 50%;
+    display: none;
+    margin-top: -200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+    
+}
+.map__img rect{
+    fill: #a4cea4;
+    stroke: #fff;
+    stroke-width: 1px;
+    transition: fill 0.3s; 
+   
+}
+
+.map__img rect:hover{
+    fill: #E06F24;
+    
+  
+}
+
+.map__img path{
+    fill: #a4cea4;
+    stroke: #fff;
+    stroke-width: 1px;
+    transition: fill 0.3s; 
+   
+}
+
+.map__img path:hover{
+    fill: #E06F24;
+  
+}
+
+.map__img1{
+    width: 50%;
+    margin-top: -255px;
+  }
+  
+  
+  .map__img1 path{
+    fill:  #a4cea4;
+    stroke: #fff;
+    stroke-width: 1px;
+    transition: fill 0.3s;
+  }
+  
+  .map__img1 path:hover{
+    fill: #6cf06c;
+  }
+  
+
+  .map {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

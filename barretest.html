@@ -1,0 +1,36 @@
+<?php
+$bdd = new PDO('mysql:host=localhost;dbname=login;', 'root', 'root');
+$allusers = $bdd->query('SELECT * from user'); if(isset($_GET['s']) AND
+!empty($_GET['s'])){ $recherche = htmlspecialchars($_GET['s']); $allusers =
+$bdd->query('SELECT username FROM user WHERE username LIKE "%'.$recherche.'%"');
+} ?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recherche Avencée</title>
+  </head>
+
+  <body>
+    <form method="GET">
+      <input
+        type="search"
+        id="search"
+        name="s"
+        placeholder="Recherche par un nom d'un prof"
+      />
+      <input type="submit" name="envoyer" />
+    </form>
+    <section class="afficher_utilisateur">
+      <?php 
+                if($allusers->rowCount() > 0) { } else{ ?>
+      <p>Aucun utilisateur trouver</p>
+      <?php 
+                    
+                }
+        ?>
+    </section>
+  </body>
+</html>
